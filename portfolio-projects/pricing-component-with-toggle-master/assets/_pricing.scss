@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.wrapper{
+
+    &--center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--center-col{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    &--center-space-col{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+    }
+
+
+}
+
+.pricing{
+    height: 100%;
+    background-image: url(/images/bg-top.svg);
+    background-color: $veryLightGrayishBlue;
+    background-position: 180% 0%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+
+
+    .header{
+        height: 115px;
+        width: 260px;
+        margin-top: 65px;
+        margin-bottom: 65px;
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (min-width: 1025px){
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__title{
+            font-size: 1.875rem;
+            color: $grayishBlue;
+            margin-bottom: 50px;
+        }
+
+        &__choose-box{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            p{
+                font-size: 0.75rem;
+                color: $lightGrayishBlue;
+            }
+        }
+    }
+
+    .plans{
+
+        .plan-box{
+            height: 455px;
+            width: 330px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            color: $grayishBlue;
+
+            &__name{
+                margin-top: 20px;
+            }
+
+            &__pricing{
+                font-size: 3.5rem;
+                color: $darkGrayishBlue;
+                margin-bottom: 10px;
+
+                opacity: 1;
+                transition: opacity 0.5s ease;
+            }
+
+            .list {
+                width: 265px;
+                padding-top: 20px;
+                border-top: 1px solid $lightGrayishBlue;
+                text-align: center;
+
+                &:last-of-type{
+                    border-bottom: 1px solid $lightGrayishBlue;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__button{
+                height: 45px;
+                width: 270px;
+                margin-bottom: 20px;
+                border-radius: 15px;
+                background: $linearGradient;
+                transition: all 0.5s ease-in-out;
+
+                a{
+                    color: white;
+                }
+                @media(min-width: 1025px){
+
+                    &:hover{
+                        cursor: pointer;
+                        background: transparent; 
+                        border: 1px solid $grayishBlue;
+                        a {
+                            color: #6F70C0;
+                        }
+                    }
+                }    
+            }
+
+            &--regural{
+                background: white;
+
+            }
+            &--emphasis{
+                background: $linearGradient;
+                color: white;
+
+                @media (min-width:1025px){
+                    scale: 1.075;
+                }
+
+                .plan-box__pricing{
+                    color: white;
+                }
+
+
+                .plan-box__button{
+                    background: white;
+                    a{
+                        color: #6F70C0;
+                    }
+
+                    @media(min-width: 1025px){
+
+                        &:hover{
+                            cursor: pointer;
+                            background: transparent; 
+                            border: 1px solid white;
+                            a {
+                                color: white;
+                            }
+                        }
+                    }    
+    
+                }
+            }
+        }
+        @media (min-width: 1025px){
+            display: flex;
+            flex-direction: row;
+
+        }
+
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Room homepage</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="app/fontawesome/css/all.css" rel="stylesheet">
+  <script src="app/js/script.js" defer></script>
+
+  <link rel="stylesheet" href="app/scss/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <img src="app/images/icon-hamburger.svg" alt="hamburger" class="header__hamburger">
+    <img src="app/images/logo.svg" alt="logo" class="header__logo">
+    <div class="header__menu header__menu--mobile">
+      <button class="header__close"><img src="app/images/icon-close.svg" alt="close"></button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="header__menu header__menu--desktop ">
+      <ul>
+        <img src="app/images/logo.svg" alt="logo" class=" header__logo header__logo--desktop">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="hero__carousel">
+      <img class="hero__img " src="app/images/desktop-image-hero-1.jpg">
+      <img class="hero__img" src="app/images/desktop-image-hero-2.jpg">
+      <img class="hero__img " src="app/images/desktop-image-hero-3.jpg">
+      <div class="hero__buttons hero__buttons--mobile">
+        <button class="hero__buttons--prev">&#60;</button>
+        <button class="hero__buttons--next">&#62; </button>
+      </div>
+    </div>
+    
+    <div class="hero__texts">
+      <div class="hero__text hero__text--1 hero__text--active">
+        <h2 class="hero__header">Discover innovative ways to decorate</h2>
+        <p class="hero__paragraph">We provide unmatched quality, comfort, and style for property owners across the country. 
+        Our experts combine form and function in bringing your vision to life. Create a room in your 
+        own style with our collection and make your property a reflection of you and what you love.
+        </p>
+        <a class="hero__cta" href="#">Shop now   &#8594;</a>
+      </div>
+
+      <div class="hero__text hero__text--2 ">
+        <h2 class="hero__header">We are available all across the globe</h2>
+        <p class="hero__paragraph">With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+        Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+        store locator. Any questions? Don't hesitate to contact us today.
+        </p>
+        <a class="hero__cta" href="#">Shop now   &#8594;</a>
+      </div>
+
+      <div class="hero__text hero__text--3 ">
+        <h2 class="hero__header">Manufactured with the best materials</h2>
+        <p class="hero__paragraph">Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+        to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+        experience in this industry, we understand what customers want for their home and office.
+        </p>
+        <a class="hero__cta" href="#">Shop now  &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <img class="about__img" src="app/images/image-about-dark.jpg">
+    <div class="about__text">
+      <h2 class="about__header">About our furniture</h2>
+      <p class="about__paragraph">
+        Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.
+      </p>
+    </div>
+    <img src="app/images/image-about-light.jpg" class="about__img">
+  </section>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Bartosz</a>.
+  </div>  -->
+</body>
+</html>

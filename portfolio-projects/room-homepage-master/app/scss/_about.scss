@@ -1,0 +1,33 @@
+.about{
+    height: 100%;
+    
+    @media(min-width: 900px) {
+        display: flex;
+    }
+
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        height: 250px;
+        @media(min-width: 900px) {
+            min-width: 250px;
+        }
+    
+    }
+
+    &__text{
+        padding: 0 32px;
+    }
+
+    &__header{
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    &__paragraph{
+        margin-bottom: 60px;
+        color: $darkGray;
+        line-height: 1.5;
+    }
+}

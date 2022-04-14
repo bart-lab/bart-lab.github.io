@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.wrapper--center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper--center-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper--center-space-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pricing {
+  height: 100%;
+  background-image: url(/images/bg-top.svg);
+  background-color: #f6f6fe;
+  background-position: 180% 0%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.pricing .header {
+  height: 115px;
+  width: 260px;
+  margin-top: 65px;
+  margin-bottom: 65px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 1025px) {
+  .pricing .header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.pricing .header__title {
+  font-size: 1.875rem;
+  color: #6d708d;
+  margin-bottom: 50px;
+}
+
+.pricing .header__choose-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pricing .header__choose-box p {
+  font-size: 0.75rem;
+  color: #b3b5c6;
+}
+
+.pricing .plans .plan-box {
+  height: 455px;
+  width: 330px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  color: #6d708d;
+}
+
+.pricing .plans .plan-box__name {
+  margin-top: 20px;
+}
+
+.pricing .plans .plan-box__pricing {
+  font-size: 3.5rem;
+  color: #494c5f;
+  margin-bottom: 10px;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.pricing .plans .plan-box .list {
+  width: 265px;
+  padding-top: 20px;
+  border-top: 1px solid #b3b5c6;
+  text-align: center;
+}
+
+.pricing .plans .plan-box .list:last-of-type {
+  border-bottom: 1px solid #b3b5c6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.pricing .plans .plan-box__button {
+  height: 45px;
+  width: 270px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(#a3a8f0, #696fdd);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.pricing .plans .plan-box__button a {
+  color: white;
+}
+
+@media (min-width: 1025px) {
+  .pricing .plans .plan-box__button:hover {
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #6d708d;
+  }
+  .pricing .plans .plan-box__button:hover a {
+    color: #6F70C0;
+  }
+}
+
+.pricing .plans .plan-box--regural {
+  background: white;
+}
+
+.pricing .plans .plan-box--emphasis {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(#a3a8f0, #696fdd);
+  color: white;
+}
+
+@media (min-width: 1025px) {
+  .pricing .plans .plan-box--emphasis {
+    scale: 1.075;
+  }
+}
+
+.pricing .plans .plan-box--emphasis .plan-box__pricing {
+  color: white;
+}
+
+.pricing .plans .plan-box--emphasis .plan-box__button {
+  background: white;
+}
+
+.pricing .plans .plan-box--emphasis .plan-box__button a {
+  color: #6F70C0;
+}
+
+@media (min-width: 1025px) {
+  .pricing .plans .plan-box--emphasis .plan-box__button:hover {
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid white;
+  }
+  .pricing .plans .plan-box--emphasis .plan-box__button:hover a {
+    color: white;
+  }
+}
+
+@media (min-width: 1025px) {
+  .pricing .plans {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.toggle {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.toggle:hover {
+  opacity: 0.5;
+}
+
+.toggle__input {
+  display: none;
+}
+
+.toggle__input:checked ~ .toggle__fill::after {
+  -webkit-transform: translateX(25px);
+          transform: translateX(25px);
+}
+
+.toggle__fill {
+  position: relative;
+  width: 55px;
+  height: 30px;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(#a3a8f0, #696fdd);
+}
+
+.toggle__fill::after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  height: 25px;
+  width: 25px;
+  background: #fff;
+  border-radius: 30px;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+/*# sourceMappingURL=style.css.map */

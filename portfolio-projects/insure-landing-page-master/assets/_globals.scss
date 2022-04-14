@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: $fontSizeMain;
+    font-family: $fontBody;
+
+}
+
+h1, h2, h3, h4{
+    font-family: $fontHeadings;
+}
+
+a{
+    text-decoration: none;
+    color: $darkViolet;
+}
+
+li{
+    list-style: none;
+}
+
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+
+    &--py{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    &--py-desktop{
+
+        @include desktop{
+            padding-right: 11.5%;
+            padding-left: 11.5%;
+        }
+    }
+
+
+}
+
+.hidden{
+    display: none;
+}
+
+.noScroll{
+    overflow: hidden;
+}
+
+.cta{
+    border: 2px solid $veryLightGray;
+    color: $veryLightGray;
+    font-weight: $fontWeightBold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &--header-mobile{
+        padding: 15px 90px 15px 90px;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+
+    &--header-desktop{
+        width: 140px;
+        height: 40px;
+        border: 2px solid $darkViolet;
+        color: $darkViolet;
+        &:hover{
+            background-color: $darkViolet;
+            color: $veryLightGray;
+        }
+    }
+
+    &--hero{
+        width: 140px;
+        height: 40px;
+        margin: 0 auto;
+        @include desktop{
+            &:hover{
+                background-color: white;
+                a{
+                    color: $veryDarkViolet;
+                }
+            }
+            margin: 0;
+        }
+    }
+
+    &--about{
+        width: 160px;
+        height: 40px;
+        margin: 0 auto;
+        a{
+            color: $veryLightGray;
+        }
+
+        @include desktop{
+            margin: 0;
+            &:hover{
+                background-color: white;
+                a{
+                    color: $veryDarkViolet;
+                }
+            }
+
+    
+        }
+    }
+
+}

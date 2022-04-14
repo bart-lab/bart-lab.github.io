@@ -1,0 +1,46 @@
+$toggleWidth: 55px;
+$toggleHeight: 30px;
+
+
+
+.toggle{
+
+    display: inline-block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    &:hover{
+        opacity: 0.5;
+    }
+
+    &__input{
+        display: none;
+
+        &:checked ~ .toggle__fill::after{
+            transform: translateX(25px);
+        
+        }
+    }
+
+    &__fill{
+        position: relative;
+        width: $toggleWidth;
+        height: $toggleHeight;
+        border-radius: $toggleHeight;
+        background: $linearGradient;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 2.5px;
+            left: 2.5px;
+            height: 25px;
+            width: 25px;
+            background: #fff;
+            border-radius: $toggleHeight;
+            transition: transform 0.2s linear;
+        }
+    }
+}
+
+
+

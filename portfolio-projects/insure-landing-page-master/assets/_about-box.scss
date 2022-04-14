@@ -1,0 +1,42 @@
+.about-box{
+    height: 345px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 140px;
+    padding: 70px 40px 70px 40px;
+    background-color: $darkViolet;
+    text-align: center;
+    background-image: url('../assets/images/bg-pattern-how-we-work-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @include desktop{
+        height: 250px;
+        margin-left: 160px;
+        margin-right: 160px;
+        padding-left: 85px;
+        padding-right: 85px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-image: url('../assets/images/bg-pattern-how-we-work-desktop.svg');
+    }
+
+
+    &__header{
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+        line-height: 1.25;
+        color: $veryLightGray;
+
+        @include desktop{
+            display: block;
+            width: 475px;
+            font-size: 3rem;
+            text-align: left;
+        }
+    }
+
+
+}

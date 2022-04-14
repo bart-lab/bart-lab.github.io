@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.header {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  -webkit-transition: background-color 1s ease-in;
+  transition: background-color 1s ease-in;
+}
+
+.header--scroll-bg {
+  background-color: #a1a1a1;
+  opacity: 0.95;
+}
+
+.header__hamburger {
+  margin-top: 45px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .header__hamburger {
+    display: none;
+  }
+}
+
+.header__logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+@media (min-width: 900px) {
+  .header__logo {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .header__logo--desktop {
+    display: block;
+  }
+}
+
+.header__close {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  cursor: pointer;
+}
+
+.header__menu {
+  position: absolute;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  background-color: white;
+  height: 110px;
+  width: 100%;
+  padding: 45px 20px;
+  -webkit-transform: translateX(-900px);
+          transform: translateX(-900px);
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+
+@media (min-width: 900px) {
+  .header__menu--mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .header__menu--desktop {
+    background-color: transparent;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+}
+
+.header__menu ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+}
+
+.header__menu a {
+  color: black;
+}
+
+@media (min-width: 900px) {
+  .header__menu a {
+    color: white;
+  }
+  .header__menu a:hover {
+    padding-bottom: 3px;
+    border-bottom: 3px solid white;
+  }
+}
+
+.header__menu li {
+  margin-left: 45px;
+  text-decoration: none;
+}
+
+.header__active {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.hero {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 530px;
+  }
+}
+
+.hero__carousel {
+  height: 360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+@media (min-width: 560px) {
+  .hero__carousel {
+    height: 480px;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero__carousel {
+    height: 530px;
+    width: 250%;
+    position: static;
+  }
+}
+
+.hero__img {
+  height: 100%;
+}
+
+.hero__img--1 {
+  margin-left: 0;
+}
+
+.hero__img--2 {
+  margin-left: -600px;
+}
+
+@media (min-width: 560px) {
+  .hero__img--2 {
+    margin-left: -760px;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero__img--2 {
+    margin-left: -850px;
+  }
+}
+
+.hero__img--3 {
+  margin-left: -1200px;
+}
+
+@media (min-width: 560px) {
+  .hero__img--3 {
+    margin-left: -1550px;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero__img--3 {
+    margin-left: -1700px;
+  }
+}
+
+.hero__buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 55px;
+  width: 110px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__buttons button {
+  color: white;
+  height: 100%;
+  width: 55px;
+  font-size: 25px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.hero__buttons button:hover {
+  background-color: #454545;
+}
+
+@media (min-width: 900px) {
+  .hero__buttons {
+    position: absolute;
+    z-index: 5;
+    left: 40%;
+    bottom: 0;
+  }
+}
+
+.hero__texts {
+  padding: 70px 32px;
+}
+
+@media (min-width: 900px) {
+  .hero__texts {
+    width: 60%;
+    height: 530px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 130px 100px;
+  }
+}
+
+.hero__text--1 {
+  opacity: 0;
+  display: none;
+}
+
+.hero__text--2 {
+  opacity: 0;
+  display: none;
+}
+
+.hero__text--3 {
+  opacity: 0;
+  display: none;
+}
+
+.hero__text--active {
+  opacity: 1;
+  display: block;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+
+.hero__header {
+  font-size: 28px;
+}
+
+.hero__paragraph {
+  margin-top: 20px;
+  color: #a1a1a1;
+}
+
+.hero__cta {
+  display: block;
+  margin-top: 60px;
+  font-size: 20px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.hero__cta:hover {
+  color: #a1a1a1;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about {
+  height: 100%;
+}
+
+@media (min-width: 900px) {
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.about__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 250px;
+}
+
+@media (min-width: 900px) {
+  .about__img {
+    min-width: 250px;
+  }
+}
+
+.about__text {
+  padding: 0 32px;
+}
+
+.about__header {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.about__paragraph {
+  margin-bottom: 60px;
+  color: #a1a1a1;
+  line-height: 1.5;
+}
+/*# sourceMappingURL=style.css.map */
