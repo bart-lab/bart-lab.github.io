@@ -1,0 +1,47 @@
+// colors
+$white: #fff;
+$black: #000;
+
+
+$lightGray: #e5e5e5;
+$orange: #fca311;
+$pureBlue: #00a8e8;
+$darkCyan: #007ea7;
+$darkBlue: #003459;
+$veryDarkBlue: #14213d;
+$mostlyBlackBlue: #00171f;
+
+
+//fonts
+
+// font-family: 'JetBrains Mono', monospace;
+// font-family: 'Press Start 2P', cursive;
+
+$fontMain: 'JetBrains Mono';
+$fontSpecial: 'Press Start 2P';
+
+$fontRegural: 400;
+$fontBold: 700;
+
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tabletAndDesktop{
+    @media (min-width: #{$tablet-width}) {
+      @content;
+    }
+  }
+  
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

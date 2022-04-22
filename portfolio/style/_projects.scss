@@ -1,0 +1,101 @@
+.projects{
+    height: 100%;
+    padding-top: 100px;
+
+    &__header{
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    &__box{
+        height: 250px;
+        width: 250px;
+        background-color: $lightGray;
+        // border: 5px solid $lightGray;
+        position: relative;
+        border-radius: 5px;
+        // overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+        
+        &:hover{
+            scale: 1.1;
+        }
+
+    }
+
+    &__img{
+        position: absolute;
+        height: 50%;
+        &--desktop{
+            top: 10%;
+            left: 5%;
+        }
+        &--mobile{
+            bottom: 10%;
+            right: 0;
+        }
+    }
+
+    &__link{
+        display: block;
+        background-color: $orange;
+        text-decoration: none;
+        color: $black;
+        padding: 3px;
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        overflow: hidden;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            bottom: 0;
+            left: -100%;
+            background-color: $black;
+            transition: all 0.25s ease-out;
+
+        }
+
+
+        &:hover{
+            &::before{
+                left:0;
+            }
+        }
+    }
+}
+
+@include tablet{
+    .projects{
+        height: 80vh;
+
+        &__grid{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include desktop{
+    .projects{
+        height: 100vh;
+        &__grid{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+}
