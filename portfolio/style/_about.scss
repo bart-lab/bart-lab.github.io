@@ -1,0 +1,54 @@
+.about{
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text{
+        width: 90%;
+        font-size: 1.25rem;
+        position: relative;
+
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 200px;
+            height: 200px;
+
+            border-top: 3px solid $darkCyan;
+            border-left: 3px solid $darkCyan;
+
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 200px;
+            height: 200px;
+
+            border-bottom: 3px solid $orange;
+            border-right: 3px solid $orange;
+
+        }
+
+    }
+}
+
+@include desktop{
+    .about{
+        height: 100vh;
+        &__text{
+            font-size: 1.5rem;
+            width: 50%;
+            font-size: 30px;
+        }
+    
+    }
+}
